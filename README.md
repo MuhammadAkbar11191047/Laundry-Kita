@@ -1,6 +1,10 @@
 # Laundry Kita 
 
-A new Flutter project.
+Kelompok A7
+
+- Delivio Fernanda
+- Istiqomatul wahida
+- Muhammad Akbar
 
 ## Getting Started
 
