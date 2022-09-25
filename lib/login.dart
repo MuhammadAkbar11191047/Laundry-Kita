@@ -12,23 +12,23 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView( 
+
         child: Container(
           width: MediaQuery.of(context).size.width,
           padding: const EdgeInsets.all(8),
-          color: Color.fromARGB(255, 94, 117, 245),
+
           child: Column(
             children: <Widget>[
               Container(
                 width: 150,
                 height: 250,
                 decoration: const BoxDecoration(
-                  color: Colors.black87,
-                  shape: BoxShape.circle,
+                  shape: BoxShape.rectangle,
+                  image: DecorationImage(image: AssetImage('assets/img/laundri.png'))
                 ),
-                child: const Center(
-                  child: Icon(Icons.person, size: 50, color: Colors.white,),
-                ),
+                
               ),
               const SizedBox(height: 10,),
               const Text('Welcome To Laundry Kita', style: TextStyle(fontSize: 20,color: Colors.black54),),

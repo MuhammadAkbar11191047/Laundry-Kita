@@ -52,9 +52,9 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      body: GridView.count(
-        padding: const EdgeInsets.all(25),
-        crossAxisCount: 2,
+      body: Column(
+        
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Card(
             margin: const EdgeInsets.all(8),
