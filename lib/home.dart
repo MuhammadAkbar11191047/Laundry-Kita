@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                   children: const <Widget>[
                     Icon(
                       Icons.list,
-                      size: 70,
+                      size: 30,
                       color: Color.fromARGB(255, 87, 130, 165),
                     ),
                     Text(
@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                   children: const <Widget>[
                     Icon(
                       Icons.list_alt,
-                      size: 70,
+                      size: 30,
                       color: Color.fromARGB(255, 87, 130, 165),
                     ),
                     Text(
@@ -122,7 +122,7 @@ class _HomePageState extends State<HomePage> {
                   children: const <Widget>[
                     Icon(
                       Icons.money_off,
-                      size: 70,
+                      size: 30,
                       color: Color.fromARGB(255, 87, 130, 165),
                     ),
                     Text(

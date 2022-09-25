@@ -1,7 +1,7 @@
 import 'dart:async';
-import 'package:deliv/login.dart';
+
+import 'package:deliv/pertama.dart';
 import 'package:flutter/material.dart';
-import 'package:deliv/login.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 3), (){
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => LoginPage()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => Pertama()));
     } );
   }
   
