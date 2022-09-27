@@ -57,6 +57,7 @@ class _HomePageState extends State<HomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Card(
+            color: Color.fromARGB(255, 152, 206, 238),
             margin: const EdgeInsets.all(8),
             child: InkWell(
               onTap: () {
@@ -70,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                   children: const <Widget>[
                     Icon(
                       Icons.list,
-                      size: 30,
+                      size: 50,
                       color: Color.fromARGB(255, 87, 130, 165),
                     ),
                     Text(
@@ -83,6 +84,8 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Card(
+
+            color: Color.fromARGB(255, 152, 206, 238),
             margin: const EdgeInsets.all(8),
             child: InkWell(
               onTap: () {
@@ -96,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                   children: const <Widget>[
                     Icon(
                       Icons.list_alt,
-                      size: 30,
+                      size: 50,
                       color: Color.fromARGB(255, 87, 130, 165),
                     ),
                     Text(
@@ -109,6 +112,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Card(
+            color: Color.fromARGB(255, 152, 206, 238),
             margin: const EdgeInsets.all(8),
             child: InkWell(
               onTap: () {
@@ -122,11 +126,39 @@ class _HomePageState extends State<HomePage> {
                   children: const <Widget>[
                     Icon(
                       Icons.money_off,
-                      size: 30,
+                      size: 50,
                       color: Color.fromARGB(255, 87, 130, 165),
                     ),
                     Text(
                       "pembayaran",
+                      style: TextStyle(fontSize: 17.0),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Card(
+            
+            color: Color.fromARGB(255, 152, 206, 238),
+            margin: const EdgeInsets.all(8),
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => const Pembayaran()));
+              },
+              splashColor: Colors.blue,
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const <Widget>[
+                    Icon(
+                      Icons.data_array,
+                      size: 50,
+                      color: Color.fromARGB(255, 87, 130, 165),
+                    ),
+                    Text(
+                      "riwayat",
                       style: TextStyle(fontSize: 17.0),
                     )
                   ],

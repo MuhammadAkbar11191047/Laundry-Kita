@@ -9,7 +9,7 @@ class Daftar extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Tambah Antrian'),
       ),
-      body: Form(
+      body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(20),
           child: Column(

@@ -31,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
                 
               ),
               const SizedBox(height: 10,),
-              const Text('Welcome To Laundry Kita', style: TextStyle(fontSize: 20,color: Colors.black54),),
+              const Text('Welcome To Laundry Kita', style: TextStyle(fontSize: 20,color: Colors.black54, fontWeight: FontWeight.bold),),
       
               const SizedBox(height: 40,),
               TextFormField(
