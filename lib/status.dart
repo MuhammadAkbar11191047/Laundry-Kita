@@ -1,7 +1,9 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
-class Pembayaran extends StatelessWidget {
-  const Pembayaran({super.key});
+class Status extends StatelessWidget {
+  const Status({super.key});
 
   @override
   Widget build(BuildContext context) {
