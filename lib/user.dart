@@ -2,53 +2,41 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Google Maps Demo',
-      home: GoogleMapSample(),
-    );
-  }
-}
+const LatLng currentLocation = LatLng(-1.1495672, 116.8613886);
 
 class GoogleMapSample extends StatefulWidget {
+  const GoogleMapSample({super.key});
+
   @override
   State<GoogleMapSample> createState() => GoogleMapSampleState();
 }
 
 class GoogleMapSampleState extends State<GoogleMapSample> {
-  Completer<GoogleMapController> _controller = Completer();
-
-  CameraPosition _mapInitialPosition = CameraPosition(
-    target: LatLng(-6.1753924, 106.8271528),
-    zoom: 15.0,
-  );
-
-  CameraPosition _anotherPosition = CameraPosition(
-    target: LatLng(-6.3753924, 106.9271528),
-    zoom: 15.0,
-  );
+  late GoogleMapController _mapController;
+  Map<String, Marker> _markers = {};
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: GoogleMap(
-        mapType: MapType.hybrid,
-        initialCameraPosition: _mapInitialPosition,
-        onMapCreated: (GoogleMapController controller) {
-          _controller.complete(controller);
+        initialCameraPosition:
+            CameraPosition(target: currentLocation, zoom: 15.0),
+        onMapCreated: (controller) {
+          _mapController = controller;
+          addMarker('test', currentLocation);
         },
+        markers: _markers.values.toSet(),
       ),
-      
     );
   }
 
-  Future<void> _moveCamera() async {
-    final GoogleMapController controller = await _controller.future;
-    controller.animateCamera(CameraUpdate.newCameraPosition(_anotherPosition));
+  addMarker(String id, LatLng location) {
+    var marker = Marker(markerId: MarkerId(id),
+    position: location);
+    _markers[id] = marker;
+    setState(() {
+      
+    });
   }
 }

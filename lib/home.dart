@@ -1,6 +1,7 @@
 import 'package:deliv/login.dart';
 import 'package:deliv/pembayaran.dart';
-import 'package:deliv/profil.dart';
+import 'package:deliv/riwayat.dart';
+
 import 'package:deliv/status.dart';
 import 'package:flutter/material.dart';
 import 'header_drawer.dart';
@@ -33,11 +34,27 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
               ListTile(
-                leading: const Icon(Icons.man),
-                title: const Text('Profil'),
+                leading: const Icon(Icons.list_alt),
+                title: const Text('Status'),
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Profil()));
+                      MaterialPageRoute(builder: (context) => const Status()));
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.list_alt),
+                title: const Text('Pembayaran'),
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Pembayaran()));
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.history),
+                title: const Text('Riwayat'),
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const HistoryPage()));
                 },
               ),
               ListTile(
@@ -52,9 +69,10 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      body: Column(
+      body: GridView.count(
+        padding: EdgeInsets.all(20),
+        crossAxisCount: 2,
         
-        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Card(
             color: Color.fromARGB(255, 152, 206, 238),

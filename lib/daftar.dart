@@ -11,6 +11,7 @@ class Daftar extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
+          width: MediaQuery.of(context).size.width, 
           padding: const EdgeInsets.all(20),
           child: Column(
             children: [
