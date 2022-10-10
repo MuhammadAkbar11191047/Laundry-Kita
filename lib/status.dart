@@ -15,7 +15,7 @@ class Status extends StatelessWidget {
               leading: CircleAvatar(),
               title: Text("Nama1"),
               subtitle: Text("Deskripsi"),
-              trailing: Text("10.00 AM"),
+              trailing: Text("Belum Selesai"),
               onTap: () {},
             ),
             Divider(
@@ -25,14 +25,14 @@ class Status extends StatelessWidget {
               leading: CircleAvatar(),
               title: Text("Nama2"),
               subtitle: Text("Deskripsi"),
-              trailing: Text("10.00 AM"),
+              trailing: Text("Selesai"),
               onTap: () {},
             ),
             ListTile(
               leading: CircleAvatar(),
               title: Text("Nama3"),
               subtitle: Text("Deskripsi"),
-              trailing: Text("10.00 AM"),
+              trailing: Text("Selesai"),
               onTap: () {},
             )
           ],
