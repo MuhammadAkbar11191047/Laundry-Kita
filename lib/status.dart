@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class Status extends StatelessWidget {
@@ -6,14 +8,33 @@ class Status extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Status Antrian'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text('Halaman Status Antrian')
+      body: Container(
+        child: ListView(
+          children: [
+            ListTile(
+              leading: CircleAvatar(),
+              title: Text("Nama1"),
+              subtitle: Text("Deskripsi"),
+              trailing: Text("10.00 AM"),
+              onTap: () {},
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+            ListTile(
+              leading: CircleAvatar(),
+              title: Text("Nama2"),
+              subtitle: Text("Deskripsi"),
+              trailing: Text("10.00 AM"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: CircleAvatar(),
+              title: Text("Nama3"),
+              subtitle: Text("Deskripsi"),
+              trailing: Text("10.00 AM"),
+              onTap: () {},
+            )
           ],
         ),
       ),
