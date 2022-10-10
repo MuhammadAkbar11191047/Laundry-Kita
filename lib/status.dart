@@ -1,13 +1,19 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
-class Status extends StatelessWidget {
-  const Status({super.key});
+class statusPage extends StatefulWidget {
+  const statusPage({super.key});
 
+  @override
+  State<statusPage> createState() => _StatusState();
+}
+
+class _StatusState extends State<statusPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Status'),
+      ),
       body: Container(
         child: ListView(
           children: [
@@ -15,7 +21,7 @@ class Status extends StatelessWidget {
               leading: CircleAvatar(),
               title: Text("Nama1"),
               subtitle: Text("Deskripsi"),
-              trailing: Text("10.00 AM"),
+              trailing: Text("Selesai"),
               onTap: () {},
             ),
             Divider(
@@ -25,14 +31,17 @@ class Status extends StatelessWidget {
               leading: CircleAvatar(),
               title: Text("Nama2"),
               subtitle: Text("Deskripsi"),
-              trailing: Text("10.00 AM"),
+              trailing: Text("Selesai"),
               onTap: () {},
+            ),
+            Divider(
+              color: Colors.black,
             ),
             ListTile(
               leading: CircleAvatar(),
               title: Text("Nama3"),
               subtitle: Text("Deskripsi"),
-              trailing: Text("10.00 AM"),
+              trailing: Text("Belum Selesai"),
               onTap: () {},
             )
           ],

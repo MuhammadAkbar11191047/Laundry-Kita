@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                 title: const Text('Status'),
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Status()));
+                      MaterialPageRoute(builder: (context) => const statusPage()));
                 },
               ),
               ListTile(
@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                 title: const Text('Riwayat'),
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const HistoryPage()));
+                      MaterialPageRoute(builder: (context) => const Riwayat()));
                 },
               ),
               ListTile(
@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
             child: InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Status()));
+                    MaterialPageRoute(builder: (context) => const statusPage()));
               },
               splashColor: Colors.blue,
               child: Center(
@@ -163,7 +163,7 @@ class _HomePageState extends State<HomePage> {
             child: InkWell(
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => const Pembayaran()));
+                    context, MaterialPageRoute(builder: (context) => const Riwayat()));
               },
               splashColor: Colors.blue,
               child: Center(
